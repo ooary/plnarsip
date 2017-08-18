@@ -76,12 +76,12 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
+     {{--    <footer>
           <div class="pull-right">
              ARSIP KEPEGAWAIAN PLN <a href="https://github.com/wedus98">Provided by  koalasdev.com</a>
           </div>
           <div class="clearfix"></div>
-        </footer>
+        </footer> --}}
         <!-- /footer content -->
       </div>
     </div>
@@ -97,7 +97,7 @@
     <!-- SweetAlert-->
     <script src="{{asset('js/sweetalert.min.js')}}"></script>
     <!-- Custom Theme Scripts -->
-    {{-- @include('sweet::alert') --}}
+    @include('sweet::alert')
     @yield('custom_js')
     <script src="{{asset('js/custom.min.js')}}"></script>
    
