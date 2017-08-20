@@ -3,14 +3,11 @@
     <link href="{{asset('css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/responsive.bootstrap.min.css')}}" rel="stylesheet">
 @endsection
-@section('page_header_title','Data Pegawai')
-@section('page_title','Data Pegawai')
-@section('page_child_title','Daftar Data Pegawai')
-@section('page_button')
-   <a href="{{url('pegawai/tambah')}}" class="btn btn-primary fa fa-plus pull-right"> Tambah Data Pegawai</a>
-@endsection
+@section('page_header_title','Data Arsip Pegawai')
+@section('page_title','Data Arsip Pegawai')
+@section('page_child_title','Daftar Data Arsip Pegawai')
 @section('content')				
-    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap datatable-responsive" cellspacing="0" width="100%">
+    <table class="table table-striped table-bordered dt-responsive nowrap datatable-responsive" cellspacing="0" width="100%">
       <thead>
         <tr>
           <th>No</th>
@@ -27,11 +24,7 @@
           <td>{{$d->nama}}</td>
           <td>{{$d->nip}}</td>
           <td>
-              {{Form::model($d,['route'=>['user.destroy',$d],'method'=>'delete','class'=>'form-inline','onsubmit'=>'return confirm("Yakin Hapus?")'])}}
-              <a href="pegawai/edit/{{$d->id_user}}" class="btn btn-warning fa fa-pencil" style="margin: 10px;"></a>
-
-              <button class="fa fa-trash btn btn-danger"></button>
-              {{Form::close()}}
+              <a href="arsip/show/{{$d->id}}" class="btn btn-success fa fa-eye " style="margin: 10px;"> Lihat Arsip</a>
           </td>
         </tr>
       @endforeach

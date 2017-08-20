@@ -22,6 +22,30 @@
   ])}}
 </div>
 </div>
+<div class="item form-group">
+  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">PERNER <span class="required">*</span>
+</label>
+<div class="col-md-6 col-sm-6 col-xs-12">
+  {{Form::text('perner',null, ['class' => 'form-control col-md-7 col-xs-12',
+  'data-parsley-required' => 'true',
+  'data-parsley-required-message' => 'Perner  Harus di isi',
+  'data-parsley-trigger'          => 'change focusout',
+  'placeholder'=>'Perner'
+  ])}}
+</div>
+</div>
+<div class="item form-group">
+  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Jabatan <span class="required">*</span>
+</label>
+<div class="col-md-6 col-sm-6 col-xs-12">
+  {{Form::text('jabatan',null, ['class' => 'form-control col-md-7 col-xs-12',
+  'data-parsley-required' => 'true',
+  'data-parsley-required-message' => 'Jabatan  Harus di isi',
+  'data-parsley-trigger'          => 'change focusout',
+  'placeholder'=>'Jabatan'
+  ])}}
+</div>
+</div>
 <div class="ln_solid"></div>
 <div class="form-group">
   <div class="col-md-6 col-md-offset-3">
