@@ -34,7 +34,7 @@
     @endforeach
   </tbody>
 </table>
-   <div class="x_title">
+  {{--  <div class="x_title">
     <h2 style="font-weight: bold; ">Daftar Surat MCU</h2>
   
     <div class="clearfix"></div>
@@ -59,7 +59,7 @@
     </tr>
     
   </tbody>
-</table>
+</table> --}}
 
 @endsection
 @section('custom_js')

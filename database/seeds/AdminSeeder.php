@@ -17,6 +17,12 @@ class AdminSeeder extends Seeder
     								'nip'=>'admin',
     								'password'=>bcrypt('admin'),
     								'role'=>'admin']);
+        
+        DB::table('users')->insert(['nama'=>'NANANG PRASETYO',
+                                    'nip'=>'7806011-Z',
+                                    'perner'=>'78061000'
+                                    'password'=>bcrypt('7806011-Z'),
+                                    'role'=>'pegawai']);
 
     }
 }

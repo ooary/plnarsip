@@ -31,7 +31,7 @@ class ArsipkuController extends Controller
    		//save into image table
    		$data = [];
    		$data['nama_sertifikat'] = $fileName;
-   		$data['id_user']=1;
+   		// $data['id_user']=1;
    		$file = sertifikat::create($data);
    		return $file;
     }
