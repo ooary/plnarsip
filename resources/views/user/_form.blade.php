@@ -49,7 +49,7 @@
 <div class="ln_solid"></div>
 <div class="form-group">
   <div class="col-md-6 col-md-offset-3">
-  <a href="{{url('tukang')}}" class="btn btn-primary">Cancel</a>
+  <a href="{{url('pegawai')}}" class="btn btn-primary">Cancel</a>
   <button id="send" type="submit" class="btn btn-success">Simpan</button>
   </div>
 </div>

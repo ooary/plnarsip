@@ -16,9 +16,9 @@ class CreateSertifikatsTable extends Migration
         Schema::create('sertifikat', function (Blueprint $table) {
             $table->increments('id_sertifikat');
             $table->string('nama_sertifikat');
-            // $table->integer('id_user')->unsigned();
+            $table->integer('id_user')->unsigned();
             $table->timestamps();
-            // $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
+            $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
         });
     }
 

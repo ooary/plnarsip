@@ -7,7 +7,7 @@
 @section('page_child_title','Daftar Data Pegawai')
 @section('content')       
                     
-   {{Form::model($data,['route'=>['user.update',$data->id],'method' => 'put','data-parsley-validate'=>'parsley','class'=>'form-horizontal form-label-left','files'=>true])}}
+   {{Form::model($data,['route'=>['user.update',$data->id_user],'method' => 'put','data-parsley-validate'=>'parsley','class'=>'form-horizontal form-label-left','files'=>true])}}
 		
       @include('user._form')
    {{Form::close()}}

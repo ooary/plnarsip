@@ -4,12 +4,23 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a href="{{url('/')}}"><i class="fa fa-laptop"></i> Dashboard</a></li>
+                        @if(Auth::user()->role=="pegawai")
+                  <li><a href="{{url('sert')}}"><i class="fa fa-laptop"></i> Sertifikat</a></li>
+                  <li><a href="{{url('/myskpp')}}"><i class="fa fa-laptop"></i> SKPP  DAN SK</a></li>
+                  <li><a href="{{url('/med')}}"><i class="fa fa-laptop"></i> MCU</a></li>
+                  <li><a href="{{url('/mysppd')}}"><i class="fa fa-laptop"></i> SPPD</a></li>
+                  <li><a href="{{url('/myads')}}"><i class="fa fa-laptop"></i> ADS</a></li>
+                  <li><a href="{{url('/mysic')}}"><i class="fa fa-laptop"></i> SIC</a></li>
+
+
+                  @endif
                   @if(Auth::user()->role=="admin")
-                  <li><a href="{{url('/arsipku')}}"><i class="fa fa-archive"></i> Data Arsip</a></li>
- {{--                  <li><a href="{{url('/arsip')}}"><i class="fa fa-archive"></i> Arsip Pegawai</a></li> --}}
+                  {{-- <li><a href="{{url('/arsipku')}}"><i class="fa fa-archive"></i> Data Arsip</a></li> --}}
+                  <li><a href="{{url('/arsip')}}"><i class="fa fa-archive"></i> Arsip Pegawai</a></li>
                   <li><a><i class="fa fa-home"></i> Data Master <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{url('/pegawai')}}">Data Pegawai</a></li>
+
                       {{-- <li><a href="{{url('/pelanggan')}}">Data Pelanggan</a></li> --}}
                     </ul>
                   </li>

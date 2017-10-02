@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <hep>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -17,6 +17,7 @@
     <!-- Custom Theme Style -->
     @yield('custom_css')
     <link href="{{asset('css/custom.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/breadcrumb.css')}}">
   </head>
 
   <body class="nav-md">
@@ -33,11 +34,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="{{asset('images/img.jpg')}}" alt="..." class="img-circle profile_img">
+                <img src="{{asset('images/pln.jpg')}}" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Admin</h2>
+                <h2>{{Auth::user()->nama}}</h2>
               </div>
               <div class="clearfix"></div>
             </div>

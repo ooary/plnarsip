@@ -19,8 +19,8 @@
       <td>{{$s->nama_sertifikat}}</td>
       <td>{{$s->created_at}}</td>
       <td>
-           <a href="arsipku/sertifikat/{{$s->nama_sertifikat}}" class="btn btn-warning fa fa-download"></a>
-              <button class="fa fa-trash btn btn-danger"></button>
+           <a href="{{url('sertifikat')}}/{{$s->nama_sertifikat}}" class="btn btn-warning fa fa-download"></a>
+  
       </td>
     </tr>
     @endforeach

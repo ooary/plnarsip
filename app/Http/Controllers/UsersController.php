@@ -22,7 +22,8 @@ class UsersController extends Controller
         return View('user.edit',compact('data'));
     }
      public function update(Request $request,$id){
-        $data = user::find($id);
+        dd('masuk');
+        $data = user::find($id);    
         if($data->nip != $request->get('nip')){
             $data['password'] = bcrypt($request->get('nip'));
         }
@@ -42,8 +43,8 @@ class UsersController extends Controller
     public function destroy(Request $request,$id){
     	$data = user::findOrfail($id);
 
-    	$user = User::where('id',$data->id)->delete();
- 
+    	// $user = User::where('id_user',$data->id)->delete();
+        $data->delete();
     	Alert()->success(strtoupper($data->nama),'Berhasil di Hapus');
         return Redirect('pegawai');
 

@@ -8,7 +8,7 @@ class Sertifikat extends Model
 {
     //
     protected $table='sertifikat';
-    protected $fillable =['nama_sertifikat'];
+    protected $fillable =['nama_sertifikat','id_user'];
     protected $primaryKey = 'id_sertifikat';
 
     /**
@@ -17,8 +17,8 @@ class Sertifikat extends Model
      *
      */
 
-    // public function user(){
-    // 	return $this->belongsTo('App\User','id_user');
-    // }
+    public function user(){
+    	return $this->belongsTo('App\User','id_user');
+    }
     
 }

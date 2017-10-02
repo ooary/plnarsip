@@ -6,6 +6,10 @@
 @endsection
 @section('page_title','Dashboard')
 @section('content')
+<div class="alert alert-info alert-dismissible fade in" role="alert">
+                 
+                    <strong>Selamat Datang!</strong> {{Auth::user()->nama}}
+</div>
 <div class="row tile_count">
 	<div class="col-lg-4 tile_stats_count">
 		<span class="count_top"><i class="fa fa-user"></i> Total Jumlah Sertifikat</span>
@@ -13,20 +17,31 @@
 	</div>
 	
 	<div class="col-lg-4 tile_stats_count">
-		<span class="count_top"><i class="fa fa-user"></i> Total Jumlah Surat Keterangan</span>
-		<div class="count green">0</div>
+		<span class="count_top"><i class="fa fa-user"></i> Total Jumlah SKPP dan SK</span>
+		<div class="count green">{{$skpp->count()}}</div>
 	</div>
 	<div class="col-lg-4 tile_stats_count">
 		<span class="count_top"><i class="fa fa-user"></i> Total Jumlah MCU</span>
-		<div class="count">0</div>
+		<div class="count">{{$mcu->count()}}</div>
 	</div>
+		<div class="col-lg-4 tile_stats_count">
+		<span class="count_top"><i class="fa fa-user"></i> Total Jumlah SPPD</span>
+		<div class="count">{{$sppd->count()}}</div>
+	</div>
+	<div class="col-lg-4 tile_stats_count">
+		<span class="count_top"><i class="fa fa-user"></i> Total Jumlah ADS</span>
+		<div class="count">{{$ads->count()}}</div>
+	</div>
+	<div class="col-lg-4 tile_stats_count">
+		<span class="count_top"><i class="fa fa-user"></i> Total Jumlah SIC</span>
+		<div class="count">{{$ads->count()}}</div>
+	</div>
+
 	
 </div>
 <center>
 {{-- {!! $chart->render() !!} --}}
 </center>
-
-@include('dashboard.section.sertifikat')
 
 @endsection
 @section('custom_js')

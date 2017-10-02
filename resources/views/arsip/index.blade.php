@@ -24,7 +24,7 @@
           <td>{{$d->nama}}</td>
           <td>{{$d->nip}}</td>
           <td>
-              <a href="arsip/show/{{$d->id}}" class="btn btn-success fa fa-eye " style="margin: 10px;"> Lihat Arsip</a>
+              <a href="arsip/show/{{$d->id_user}}" class="btn btn-success fa fa-eye " style="margin: 10px;"> Lihat Arsip</a>
           </td>
         </tr>
       @endforeach
